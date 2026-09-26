@@ -1,0 +1,2 @@
+import Link from 'next/link'; import {Logo} from './Logo';
+export function Footer(){return <footer className="mt-20 border-t bg-white"><div className="container-page flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between"><div><Logo/><p className="mt-3 max-w-sm text-sm text-gray-500">Витрина партнёрских предложений и полезных сервисов.</p></div><div className="flex gap-5 text-sm text-gray-500"><Link href="/about">О проекте</Link><Link href="/privacy">Политика конфиденциальности</Link><Link href="/terms">Условия использования</Link></div></div></footer>}

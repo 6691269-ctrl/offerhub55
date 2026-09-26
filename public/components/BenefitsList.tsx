@@ -1,0 +1,1 @@
+import {Check} from 'lucide-react'; export function BenefitsList({items}:{items:string[]}){return <ul className="space-y-2">{items.map(x=><li key={x} className="flex items-start gap-2 text-sm text-gray-700"><span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-indigo-50 text-[var(--accent)]"><Check className="size-3.5"/></span>{x}</li>)}</ul>}

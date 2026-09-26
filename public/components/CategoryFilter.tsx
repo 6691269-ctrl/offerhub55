@@ -1,0 +1,2 @@
+'use client';
+export function CategoryFilter({categories,active,onChange}:{categories:string[];active:string;onChange:(v:string)=>void}){return <div className="flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Категории">{['Все',...categories].map(c=><button role="tab" aria-selected={active===c} key={c} onClick={()=>onChange(c)} className={`shrink-0 rounded-full px-4 py-2 text-sm transition ${active===c?'bg-gray-900 text-white':'bg-white text-gray-600 ring-1 ring-gray-200 hover:bg-gray-50'}`}>{c}</button>)}</div>}
