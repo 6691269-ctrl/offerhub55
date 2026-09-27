@@ -23,8 +23,8 @@ export const offers: Offer[] = [
     subtitle: "Регистрация бизнеса",
     description: "Регистрация ИП или ООО онлайн.",
     category: "Бизнес",
-    logo: "/images/alfa-logo.svg",
-    image: "/images/alfa-business.svg",
+    logo: logo: "/images/Alpha Logo.svg",,
+    image: image: "/images/Alpha Business.svg",,
     benefits: [
       "Регистрация бизнеса онлайн",
       "Помощь с оформлением",
@@ -43,8 +43,8 @@ export const offers: Offer[] = [
     subtitle: "Инструменты для предпринимателей",
     description: "Подбор продуктов и сервисов для бизнеса.",
     category: "Сервисы",
-    logo: "/images/service-logo.svg",
-    image: "/images/service-banner.svg",
+    logo: logo: "/images/Service Logo.svg",,
+    image: image: "/images/Service Banner.svg",,
     benefits: [
       "Единый интерфейс",
       "Полезные инструменты",
