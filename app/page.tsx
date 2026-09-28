@@ -1,2 +1,6 @@
-import {HomeClient} from '@/components/HomeClient'; import {offers,categories} from '@/data/offers';
-export default async function Home({searchParams}:{searchParams:Promise<{category?:string}>}){const sp=await searchParams; const initialCategory=sp.category&&categories.includes(sp.category)?sp.category:'Все'; return <HomeClient offers={offers} categories={categories} initialCategory={initialCategory}/>}
+import { HomeClient } from "@/components/HomeClient";
+import { offers } from "@/data/offers";
+
+export default function Home() {
+  return <HomeClient offers={offers} />;
+}
