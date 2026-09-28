@@ -33,7 +33,7 @@ export const offers: Offer[] = [
       "Удобное оформление",
     ],
     buttonText: "Подробнее",
-    affiliateUrl: "https://example.com/affiliate",
+affiliateUrl: "https://alfa.me/hVihhG",
     featured: true,
     badge: "Популярное",
   },
@@ -52,7 +52,7 @@ export const offers: Offer[] = [
       "Онлайн-доступ",
     ],
     buttonText: "Подробнее",
-    affiliateUrl: "https://example.com/affiliate",
+    affiliateUrl: "https://alfa.me/yXIMaM",
   },
 ];
 
