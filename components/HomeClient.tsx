@@ -1,38 +1,32 @@
+"use client";
 
-                  "use client";
-
-import Link from "next/link";
 import { useMemo, useState } from "react";
-
-type Offer = {
-  slug: string;
-  title: string;
-  description?: string;
-  image?: string;
-  benefits?: string[];
-  category?: string;
-};
+import Link from "next/link";
+import type { Offer } from "@/data/offers";
 
 type Props = {
   offers: Offer[];
   categories: string[];
-  initialCategory: string;
+  initialCategory?: string;
 };
 
 export function HomeClient({
   offers,
   categories,
-  initialCategory,
+  initialCategory = "Все",
 }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState(initialCategory);
 
   const filteredOffers = useMemo(() => {
-    return offers.filter((offer) => {
-      const text =
-        `${offer.title} ${offer.description ?? ""}`.toLowerCase();
+    const normalizedQuery = query.trim().toLowerCase();
 
-      const matchesSearch = text.includes(query.toLowerCase());
+    return offers.filter((offer) => {
+      const matchesSearch =
+        !normalizedQuery ||
+        offer.title.toLowerCase().includes(normalizedQuery) ||
+        offer.description.toLowerCase().includes(normalizedQuery) ||
+        offer.subtitle.toLowerCase().includes(normalizedQuery);
 
       const matchesCategory =
         category === "Все" || offer.category === category;
@@ -40,6 +34,8 @@ export function HomeClient({
       return matchesSearch && matchesCategory;
     });
   }, [offers, query, category]);
+
+  const categoryOptions = ["Все", ...categories];
 
   return (
     <main className="min-h-screen">
@@ -68,7 +64,7 @@ export function HomeClient({
             onChange={(e) => setCategory(e.target.value)}
             className="rounded-xl border px-4 py-3"
           >
-            {categories.map((item) => (
+            {categoryOptions.map((item) => (
               <option key={item} value={item}>
                 {item}
               </option>
@@ -100,13 +96,19 @@ export function HomeClient({
                     {offer.title}
                   </h2>
 
+                  {offer.subtitle && (
+                    <p className="mt-1 text-sm text-gray-500">
+                      {offer.subtitle}
+                    </p>
+                  )}
+
                   {offer.description && (
                     <p className="mt-2 text-sm text-gray-600">
                       {offer.description}
                     </p>
                   )}
 
-                  {offer.benefits && (
+                  {offer.benefits?.length > 0 && (
                     <ul className="mt-4 space-y-2 text-sm">
                       {offer.benefits.map((benefit) => (
                         <li key={benefit}>✓ {benefit}</li>
@@ -116,9 +118,9 @@ export function HomeClient({
 
                   <Link
                     href={`/offer/${offer.slug}`}
-                    className="mt-5 inline-flex w-full justify-center rounded-xl bg-black px-4 py-3 font-medium text-white"
+                    className="mt-5 inline-flex w-full justify-center rounded-xl bg-black px-4 py-3 font-medium text-white transition hover:opacity-80"
                   >
-                    Подробнее
+                    {offer.buttonText || "Подробнее"}
                   </Link>
                 </div>
               </article>
