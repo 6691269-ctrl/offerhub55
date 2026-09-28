@@ -1,19 +1,22 @@
-import Link from "next/link";
-
 export function Header() {
   return (
-    <header className="border-b bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-xl font-bold">
-          OfferHub
-        </Link>
-
-        <nav className="flex gap-5 text-sm">
-          <Link href="/">Главная</Link>
-          <Link href="/about">О нас</Link>
-          <Link href="/privacy">Конфиденциальность</Link>
-        </nav>
+    <nav>
+      <div
+        className="wrap"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <a href="/" className="logo">
+          Offer<span>Hub</span>
+        </a>
+        <div style={{ fontSize: 13, color: "#667085" }}>
+          Финансовые предложения
+        </div>
       </div>
-    </header>
+    </nav>
   );
 }
