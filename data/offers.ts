@@ -27,7 +27,7 @@ export const offers: Offer[] = [
     logo: "/images/Alpha Logo.svg",
     image: "/images/Alpha Business.svg",
     benefits: [
-      "Регистрация бизнеса онлайн",
+      "Регистрация бизнеса онлайн", 
       "Помощь с оформлением",
       "Онлайн-подача документов",
       "Удобное оформление",
