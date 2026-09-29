@@ -1,4 +1,69 @@
-import type {Metadata} from 'next'; import {notFound} from 'next/navigation'; import Link from 'next/link'; import {offers} from '@/data/offers'; import {OfferHero} from '@/components/OfferHero'; import {OfferViewTracker} from '@/components/OfferViewTracker'; import {buildAffiliateUrl} from '@/lib/affiliate';
-export function generateStaticParams(){return offers.map(o=>({slug:o.slug}));}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params; const o=offers.find(x=>x.slug===slug); if(!o)return {}; return {title:`${o.title} — ${o.subtitle}`,description:o.description,alternates:{canonical:`/offer/${o.slug}`},openGraph:{title:`${o.title} — ${o.subtitle} | OfferHub`,description:o.description,images:[o.image]}};}
-export default async function OfferPage({params,searchParams}:{params:Promise<{slug:string}>;searchParams:Promise<{utm_source?:string;utm_medium?:string;utm_campaign?:string}>}){const {slug}=await params; const sp=await searchParams; const o=offers.find(x=>x.slug===slug); if(!o)notFound(); const qs=new URLSearchParams(); for(const k of ['utm_source','utm_medium','utm_campaign'] as const)if(sp[k])qs.set(k,sp[k]!); const href=buildAffiliateUrl(o,qs); return <><OfferViewTracker offer={o}/><section className="container-page py-8 sm:py-12"><nav aria-label="Хлебные крошки" className="mb-8 text-sm text-gray-500"><Link href="/" className="hover:text-gray-900">Все предложения</Link><span className="mx-2">/</span><span>{o.category}</span><span className="mx-2">/</span><span className="text-gray-900">{o.title}</span></nav><OfferHero offer={o} affiliateUrl={href}/><div className="mt-8 rounded-2xl border border-gray-200 bg-white p-5 sm:p-6"><h2 className="font-semibold">Что важно знать</h2><p className="mt-2 text-sm leading-6 text-gray-600">Перед оформлением проверьте актуальные условия и требования на официальном сайте поставщика. OfferHub не является стороной договора между пользователем и поставщиком услуги.</p></div></section></>}
+import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
+import { offers } from '@/data/offers';
+import { buildAffiliateUrl } from '@/lib/affiliate';
+
+export function generateStaticParams() {
+  return offers.map((o) => ({ slug: o.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const o = offers.find((x) => x.slug === slug);
+
+  if (!o) return {};
+
+  return {
+    title: `${o.title} — ${o.subtitle}`,
+    description: o.description,
+    alternates: {
+      canonical: `/offer/${o.slug}`,
+    },
+    openGraph: {
+      title: `${o.title} — ${o.subtitle} | OfferHub`,
+      description: o.description,
+      images: [o.image],
+    },
+  };
+}
+
+export default async function OfferPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+  }>;
+}) {
+  const { slug } = await params;
+  const sp = await searchParams;
+
+  const o = offers.find((x) => x.slug === slug);
+
+  if (!o) {
+    redirect('/');
+  }
+
+  const qs = new URLSearchParams();
+
+  for (const key of [
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+  ] as const) {
+    if (sp[key]) {
+      qs.set(key, sp[key]!);
+    }
+  }
+
+  const href = buildAffiliateUrl(o, qs);
+
+  redirect(href);
+}
