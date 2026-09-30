@@ -185,8 +185,6 @@ export function HomeClient({ offers }: Props) {
               <div className="age">{offer.age || "Возраст: 18+"}</div>
 
               <div className="bottom">
-                <div className="pay">{offer.pay}</div>
-
                 <a
                   className="cta"
                   href={offer.affiliateUrl}
@@ -240,8 +238,6 @@ export function HomeClient({ offers }: Props) {
                     <h2 id="detailTitle">{selected.title}</h2>
                   </div>
                 </div>
-
-                <div className="detail-price">{selected.pay}</div>
 
                 <ul className="detail-list">
                   {selected.benefits.map((benefit, index) => (
