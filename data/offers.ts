@@ -10,7 +10,7 @@ export interface Offer {
   benefits: string[];
   buttonText: string;
   affiliateUrl: string;
-  pay: string;
+  pay?: string;
   age: string;
   bankName: string;
   brandClass: string;
