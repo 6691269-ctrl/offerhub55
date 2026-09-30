@@ -10,7 +10,7 @@ export interface Offer {
   benefits: string[];
   buttonText: string;
   affiliateUrl: string;
-  pay?: string;
+  
   age: string;
   bankName: string;
   brandClass: string;
@@ -32,7 +32,7 @@ export const offers: Offer[] = [
     benefits: ["Открытие расчётного счёта онлайн. Первые 2 месяца — 0 ₽.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://tbank.ru/baf/1wG3HNHiLT2",
-    pay: "3 000 ₽",
+    
     age: "Возраст: 18+",
     bankName: "Т-Банк",
     brandClass: "brand-t",
@@ -49,7 +49,7 @@ export const offers: Offer[] = [
     benefits: ["Регистрация ИП или ООО онлайн без госпошлин и походов в ФНС/МФЦ.", "Условия указаны в карточке оффера"],
     buttonText: "Зарегистрировать бизнес",
     affiliateUrl: "https://tbank.ru/baf/An8tbrjfuBL",
-    pay: "3 000 ₽",
+    
     age: "Возраст: 18+",
     bankName: "Т-Банк",
     brandClass: "brand-t",
@@ -66,7 +66,7 @@ export const offers: Offer[] = [
     benefits: ["Кэшбэк до 30% по спецпредложениям, до 15% в выбранных категориях, бесплатная доставка.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://tbank.ru/baf/6BrzYvaxSaf",
-    pay: "800 ₽",
+
     age: "Возраст: 18+",
     bankName: "Т-Банк",
     brandClass: "brand-t",
@@ -83,7 +83,7 @@ export const offers: Offer[] = [
     benefits: ["Целевое действие: активация карты и транзакция от 1 000 ₽ после встречи с представителем.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://tbank.ru/baf/55vbRqjT8Ye",
-    pay: "2 000 ₽",
+  
     age: "Возраст: 18+",
     bankName: "Т-Банк",
     brandClass: "brand-t",
@@ -100,7 +100,7 @@ export const offers: Offer[] = [
     benefits: ["Открытие счёта. Для активного клиента — расходные операции суммарно от 100 000 ₽ за 3 месяца.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://alfa.me/yXIMaM",
-    pay: "5 000 ₽",
+    
     age: "Возраст: 18+",
     bankName: "Альфа-Банк",
     brandClass: "brand-alpha",
@@ -117,7 +117,7 @@ export const offers: Offer[] = [
     benefits: ["Регистрация ООО/ИП и открытие счёта. Онлайн оформление.", "Условия указаны в карточке оффера"],
     buttonText: "Зарегистрировать бизнес",
     affiliateUrl: "https://alfa.me/hVihhG",
-    pay: "5 000 ₽",
+  
     age: "Возраст: 18+",
     bankName: "Альфа-Банк",
     brandClass: "brand-alpha",
@@ -134,7 +134,7 @@ export const offers: Offer[] = [
     benefits: ["До 60 дней без процентов на покупки, бесплатное обслуживание в первый год, кэшбэк.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/339?erid=2W5zFJjJPEG",
-    pay: "1 800 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "Альфа-Банк",
     brandClass: "brand-alpha",
@@ -151,7 +151,7 @@ export const offers: Offer[] = [
     benefits: ["Расчётный счёт для ИП и ООО. Открытие бесплатно, обслуживание от 0 ₽, есть выездной сервис.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/473",
-    pay: "2 000 ₽",
+  
     age: "Возраст: 18+",
     bankName: "ВТБ",
     brandClass: "brand-vtb",
@@ -168,7 +168,7 @@ export const offers: Offer[] = [
     benefits: ["Открытие и активация счёта. География: Санкт-Петербург, Ленобласть, Москва, Калининград, Новосибирск.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/591?erid=2W5zFH4SETs",
-    pay: "5 000 ₽",
+   
     age: "Возраст: 18+",
     bankName: "БСПБ",
     brandClass: "brand-bspb",
@@ -185,7 +185,7 @@ export const offers: Offer[] = [
     benefits: ["Открытие счёта на платном тарифе. Обслуживание от 0 ₽, эквайринг от 0,4%.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/360?erid=2W5zFK8dcHf",
-    pay: "5 000 ₽",
+   
     age: "Возраст: 18+",
     bankName: "ПСБ",
     brandClass: "brand-psb",
@@ -202,7 +202,7 @@ export const offers: Offer[] = [
     benefits: ["Активация: открытие и операции общей суммой от 2 млн ₽ в течение 60 дней.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/607?erid=2W5zFHGayqj",
-    pay: "5 000 ₽",
+    
     age: "Возраст: 18+",
     bankName: "ОТП Банк",
     brandClass: "brand-otp",
@@ -219,7 +219,7 @@ export const offers: Offer[] = [
     benefits: ["До 200 дней без процентов при рефинансировании; до 100/110 дней на покупки по условиям продукта.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/473",
-    pay: "1 200 ₽",
+
     age: "Возраст: 18+",
     bankName: "ВТБ",
     brandClass: "brand-vtb",
@@ -236,7 +236,7 @@ export const offers: Offer[] = [
     benefits: ["Лимит до 600 000 ₽, кэшбэк до 10% в отдельных категориях, бесплатное обслуживание.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://trk.ppdu.ru/click/5zwnL4wb?erid=2SDnjdLFXE2",
-    pay: "1 700 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "URBAN CARD",
     brandClass: "brand-urban",
@@ -253,7 +253,7 @@ export const offers: Offer[] = [
     benefits: ["Кредитный лимит до 1 млн ₽, оплата частями без переплат по условиям продукта, обслуживание 0 ₽.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть супер Сплит",
     affiliateUrl: "https://trk.ppdu.ru/click/c2tcMojk?erid=2SDnjdJuo9L",
-    pay: "2 300 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "Яндекс",
     brandClass: "brand-yandex",
@@ -270,7 +270,7 @@ export const offers: Offer[] = [
     benefits: ["Карта «115 дней без %»: льготный период на покупки, лимит до 600 000 ₽.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://trk.ppdu.ru/click/vveaiB3Z?erid=2SDnjdFo9iJ",
-    pay: "1 200 ₽",
+
     age: "Возраст: 18+",
     bankName: "Ренессанс",
     brandClass: "brand-renaissance",
@@ -287,7 +287,7 @@ export const offers: Offer[] = [
     benefits: ["Новый клиент 18+. Любая безналичная покупка от 100 ₽ в течение 30 дней.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://trk.ppdu.ru/click/9rHbJEp2?erid=2SDnjeiRuUn",
-    pay: "700 ₽",
+
     age: "Возраст: 18+",
     bankName: "ОТП Банк",
     brandClass: "brand-otp",
@@ -304,7 +304,7 @@ export const offers: Offer[] = [
     benefits: ["Активный счёт: минимум 3 расходные операции от 50 000 ₽ за 30 дней или депозит от 50 000 ₽.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://trk.ppdu.ru/click/FC9DZQIb?erid=2SDnjcPdd1V",
-    pay: "6 000 ₽",
+
     age: "Возраст: 18+",
     bankName: "Ингосстрах",
     brandClass: "brand-ingos",
@@ -321,7 +321,7 @@ export const offers: Offer[] = [
     benefits: ["Карта МИР «Главная»: кэшбэк 1,5% за покупки, бесплатное обслуживание.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://trk.ppdu.ru/click/v4nDRTg1?erid=2SDnjc5pqbZ",
-    pay: "700 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "Ренессанс",
     brandClass: "brand-renaissance",
@@ -338,7 +338,7 @@ export const offers: Offer[] = [
     benefits: ["Целевое действие: 1 исходящий платёж или оплата тарифа. Только новый клиент.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://trk.ppdu.ru/click/FKQbtDz9?erid=2SDnjdABGBD",
-    pay: "3 500 ₽",
+  
     age: "Возраст: 18+",
     bankName: "Точка",
     brandClass: "brand-tochka",
@@ -355,7 +355,7 @@ export const offers: Offer[] = [
     benefits: ["Займ от 1 000 до 30 000 ₽, срок 7–30 дней, ставка 0,8% в день по условиям оффера.", "Условия указаны в карточке оффера"],
     buttonText: "Получить займ",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/918?erid=2W5zFK43c2V",
-    pay: "2 000 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "Белка",
     brandClass: "brand-belka",
@@ -372,7 +372,7 @@ export const offers: Offer[] = [
     benefits: ["Займ от 1 000 до 30 000 ₽, срок 3–30 дней, для новых клиентов возможна ставка 0%.", "Условия указаны в карточке оффера"],
     buttonText: "Получить займ",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/968?erid=2SDnjd5zDS9",
-    pay: "1 200 ₽",
+
     age: "Возраст: 18+",
     bankName: "Bunny Money",
     brandClass: "brand-bunny",
@@ -389,7 +389,7 @@ export const offers: Offer[] = [
     benefits: ["Первый заём для новых клиентов — 0% по условиям оффера; сумма 1 000–30 000 ₽.", "Условия указаны в карточке оффера"],
     buttonText: "Получить займ",
     affiliateUrl: "https://credit7.ru/",
-    pay: "1 400 ₽",
+
     age: "Возраст: 18+",
     bankName: "Credit7",
     brandClass: "brand-credit7",
@@ -406,7 +406,7 @@ export const offers: Offer[] = [
     benefits: ["Сумма и срок по условиям оффера; ставка 0,8% в день, досрочное погашение без комиссии.", "Условия указаны в карточке оффера"],
     buttonText: "Получить займ",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/445?erid=2W5zFHxUXcu",
-    pay: "1 100 ₽",
+   
     age: "Возраст: 18+",
     bankName: "FastMoney",
     brandClass: "brand-fastmoney",
@@ -423,7 +423,7 @@ export const offers: Offer[] = [
     benefits: ["Сумма 3 000–30 000 ₽, срок 5–30 дней, ставка от 0,8% в день.", "Условия указаны в карточке оффера"],
     buttonText: "Получить займ",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/106?erid=LjN8KN99W",
-    pay: "2 300 ₽",
+  
     age: "Возраст: 18+",
     bankName: "MaxКредит",
     brandClass: "brand-maxcredit",
@@ -440,7 +440,7 @@ export const offers: Offer[] = [
     benefits: ["Займы от 1 500 до 100 000 ₽. Первый до 15 000 ₽ на срок до 21 дня — без процентов по условиям оффера.", "Условия указаны в карточке оффера"],
     buttonText: "Получить займ",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/101?erid=2W5zFGacKGm",
-    pay: "1 500 ₽",
+
     age: "Возраст: 18+",
     bankName: "MoneyMan",
     brandClass: "brand-moneyman",
@@ -457,7 +457,7 @@ export const offers: Offer[] = [
     benefits: ["Регистрация ИП/ООО, счёт с тарифом от 0 ₽, бесплатная онлайн-бухгалтерия и КЭП.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть бизнес",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/955?erid=2W5zFHPj8YH",
-    pay: "6 000 ₽",
+
     age: "Возраст: 18+",
     bankName: "Банк",
     brandClass: "brand-tochka",
@@ -474,7 +474,7 @@ export const offers: Offer[] = [
     benefits: ["Онлайн-займы без посещения офиса. Рассмотрение заявки и выдача онлайн.", "Условия указаны в карточке оффера"],
     buttonText: "Получить займ",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/77?erid=LjN8JwPDS",
-    pay: "1 500 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "Webbankir",
     brandClass: "brand-webbankir",
@@ -491,7 +491,7 @@ export const offers: Offer[] = [
     benefits: ["Карта с льготным периодом 115 дней, кэшбэком и бесплатным снятием/переводами до 50 000 ₽ по условиям.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/396?erid=2VfnxvWzhKv",
-    pay: "900 ₽",
+   
     age: "Возраст: 18+",
     bankName: "Ак Барс",
     brandClass: "brand-akbars",
@@ -508,7 +508,7 @@ export const offers: Offer[] = [
     benefits: ["Активация карты + транзакция от любой суммы в течение 90 дней.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/941?erid=2W5zFHUSt6V",
-    pay: "2 000 ₽",
+  
     age: "Возраст: 18+",
     bankName: "ОТП Банк",
     brandClass: "brand-otp",
@@ -525,7 +525,7 @@ export const offers: Offer[] = [
     benefits: ["До 25% приветственного кэшбэка на покупки первые 3 месяца по условиям акции.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/639?erid=2W5zFFyDoLU",
-    pay: "800 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "ПСБ",
     brandClass: "brand-psb",
@@ -542,7 +542,7 @@ export const offers: Offer[] = [
     benefits: ["Лимит до 500 000 ₽, рассрочка до 24 месяцев у партнёров, обслуживание и выпуск бесплатно.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/456?erid=2W5zFJuEp7a",
-    pay: "1 000 ₽",
+
     age: "Возраст: 18+",
     bankName: "Совкомбанк",
     brandClass: "brand-sovcom",
@@ -559,7 +559,7 @@ export const offers: Offer[] = [
     benefits: ["Карта «Моя Жизнь»: кэшбэк до 6%, до 14% годовых на накопительный счёт.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/630?erid=2W5zFGqZFCm",
-    pay: "1 000 ₽",
+  
     age: "Возраст: 18+",
     bankName: "УБРиР",
     brandClass: "brand-ubr",
@@ -576,7 +576,7 @@ export const offers: Offer[] = [
     benefits: ["Лимит до 5 млн ₽, до 120 дней без процентов, бесплатное обслуживание.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/407?erid=2W5zFH4Ww45",
-    pay: "2 000 ₽",
+
     age: "Возраст: 18+",
     bankName: "Уралсиб",
     brandClass: "brand-uralsib",
@@ -593,7 +593,7 @@ export const offers: Offer[] = [
     benefits: ["До 111 дней без процентов, кэшбэк до 10 000 ₽ в месяц, бесплатный выпуск и обслуживание.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://trk.ppdu.ru/click/nz2B3IkF?erid=2SDnjco6Mtf",
-    pay: "700 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "МТС Банк",
     brandClass: "brand-mts",
@@ -610,7 +610,7 @@ export const offers: Offer[] = [
     benefits: ["До 140 дней на отдельные покупки Ozon и до 80 дней на остальные покупки по условиям продукта.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://trk.ppdu.ru/click/cvM4koFh?erid=2SDnjcGXYYi",
-    pay: "700 ₽",
+
     age: "Возраст: 18+",
     bankName: "Банк",
     brandClass: "brand-tochka",
@@ -627,7 +627,7 @@ export const offers: Offer[] = [
     benefits: ["Лимит до 1 млн ₽, до 55 дней льготного периода на покупки, рассрочка до 24 месяцев.", "Условия указаны в карточке оффера"],
     buttonText: "Оформить карту",
     affiliateUrl: "https://trk.ppdu.ru/click/9rGcK9vc?erid=2SDnjdLo1rH",
-    pay: "1 300 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "Банк",
     brandClass: "brand-tochka",
@@ -644,7 +644,7 @@ export const offers: Offer[] = [
     benefits: ["Бесплатное обслуживание, кэшбэк, выгода за оплату ЖКХ и до 11% годовых на остаток по условиям.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/397?erid=2VfnxvWzhKv",
-    pay: "800 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "Ак Барс",
     brandClass: "brand-akbars",
@@ -661,7 +661,7 @@ export const offers: Offer[] = [
     benefits: ["Выдача и активация карты с транзакцией в течение месяца. География ограничена регионами оффера.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/702?erid=2W5zFG4fRU5",
-    pay: "700 ₽",
+
     age: "Возраст: 18+",
     bankName: "БСПБ",
     brandClass: "brand-bspb",
@@ -678,7 +678,7 @@ export const offers: Offer[] = [
     benefits: ["До 30% кэшбэка в категориях, бесплатный выпуск и обслуживание, МТС Premium в подарок по условиям.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/618?erid=2W5zFHxULji",
-    pay: "600 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "МТС Банк",
     brandClass: "brand-mts",
@@ -695,7 +695,7 @@ export const offers: Offer[] = [
     benefits: ["Дебетовая карта UnionPay в рублях: выпуск и обслуживание бесплатно, до 15% кэшбэка.", "Условия указаны в карточке оффера"],
     buttonText: "Получить карту",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/930?erid=2W5zFGdgfuj",
-    pay: "800 ₽",
+
     age: "Возраст: 18+",
     bankName: "РСХБ",
     brandClass: "brand-rshb",
@@ -712,7 +712,7 @@ export const offers: Offer[] = [
     benefits: ["Открытие + активация: исходящие платежи другим контрагентам через ДБО от 10 000 ₽.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/382?erid=2VfnxvbSfAx",
-    pay: "1 700 ₽",
+  
     age: "Возраст: 18+",
     bankName: "Ак Барс",
     brandClass: "brand-akbars",
@@ -729,7 +729,7 @@ export const offers: Offer[] = [
     benefits: ["Открытие расчётного счёта для бизнеса. Новореги менее 30 дней и ИП на НПД не оплачиваются.", "Условия указаны в карточке оффера"],
     buttonText: "Открыть счёт",
     affiliateUrl: "https://t.fincpanetwork.ru/click/91247/982",
-    pay: "5 000 ₽",
+ 
     age: "Возраст: 18+",
     bankName: "Сбер",
     brandClass: "brand-sber",
