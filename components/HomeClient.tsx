@@ -49,6 +49,12 @@ function bankMark(name: string) {
   return marks[name] ?? name.slice(0, 2).toUpperCase();
 }
 
+// Скрываем именно денежные суммы/цены из карточек.
+// Остальные данные и цифры (например, возраст) не трогаем.
+function isPriceText(text: string) {
+  return /(?:₽|руб(?:\.|ля|лей)?|р\.)(?![a-zа-я])/i.test(text);
+}
+
 export function HomeClient({ offers }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Все");
@@ -57,7 +63,13 @@ export function HomeClient({ offers }: Props) {
   const filteredOffers = useMemo(() => {
     const q = query.trim().toLowerCase();
 
-    return offers.filter((offer) => {
+    // Убираем дубли предложений по id, чтобы один и тот же оффер
+    // не отображался второй раз даже при дубле в data/offers.ts.
+    const uniqueOffers = Array.from(
+      new Map(offers.map((offer) => [offer.id, offer])).values()
+    );
+
+    return uniqueOffers.filter((offer) => {
       const matchesCategory =
         category === "Все" || offer.category === category;
 
@@ -177,9 +189,11 @@ export function HomeClient({ offers }: Props) {
               <h3>{offer.title}</h3>
 
               <ul className="criteria">
-                {offer.benefits.map((benefit, index) => (
-                  <li key={`${offer.id}-${index}`}>{benefit}</li>
-                ))}
+                {offer.benefits
+                  .filter((benefit) => !isPriceText(benefit))
+                  .map((benefit, index) => (
+                    <li key={`${offer.id}-${index}`}>{benefit}</li>
+                  ))}
               </ul>
 
               <div className="age">{offer.age || "Возраст: 18+"}</div>
@@ -240,9 +254,11 @@ export function HomeClient({ offers }: Props) {
                 </div>
 
                 <ul className="detail-list">
-                  {selected.benefits.map((benefit, index) => (
-                    <li key={`${selected.id}-detail-${index}`}>{benefit}</li>
-                  ))}
+                  {selected.benefits
+                    .filter((benefit) => !isPriceText(benefit))
+                    .map((benefit, index) => (
+                      <li key={`${selected.id}-detail-${index}`}>{benefit}</li>
+                    ))}
                 </ul>
 
                 <div className="detail-age">
