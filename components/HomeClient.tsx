@@ -59,6 +59,11 @@ export function HomeClient({ offers }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("Все");
   const [selected, setSelected] = useState<Offer | null>(null);
+  console.log("Всего офферов:", offers.length);
+console.log(
+  "РКО:",
+  offers.filter((offer) => offer.category === "РКО").length
+);
 
   const filteredOffers = useMemo(() => {
     const q = query.trim().toLowerCase();
